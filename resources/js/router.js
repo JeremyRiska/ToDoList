@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import TaskList from '@/views/TaskList.vue';
-import TaskDetail from '@/views/TaskDetail.vue';
-
+import TaskList from '@/views/Tasks/TaskList.vue';
+import TaskDetail from '@/views/Tasks/TaskDetail.vue';
+import Login from '@/views/Auth/Login.vue';
 
 const routes = [
     {
@@ -13,7 +13,11 @@ const routes = [
         component: TaskDetail,
         name: 'task-detail',
         props: true,
-    }
+    },
+    {
+        path: '/task/login',
+        component: Login,
+    },
 ];
 
 

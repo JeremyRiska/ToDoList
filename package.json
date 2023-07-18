@@ -22,6 +22,8 @@
         "laravel-vue-pagination": "^4.1.0",
         "vee-validate": "^4.10.6",
         "vue-router": "^4.2.4",
-        "vuedraggable": "^4.1.0"
+        "vuedraggable": "^4.1.0",
+        "vuex": "^4.1.0",
+        "vuex-persistedstate": "^4.1.0"
     }
 }

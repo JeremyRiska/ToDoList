@@ -6,6 +6,8 @@
 
 import './bootstrap';
 import router from './router';
+import store from './store'
+
 import Toaster from '@meforma/vue-toaster';
 
 import { createApp } from 'vue';
@@ -44,4 +46,5 @@ app.use(Toaster, {
     position: 'top',
     duration: 3000
 });
+app.use(store);
 app.mount('#app');

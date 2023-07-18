@@ -11,7 +11,7 @@
 
                 <div class="mb-3">
                     <label for="descriptionEditInput" class="form-label">Example textarea</label>
-                    <textarea class="form-control" name="description" v-model="data.description" id="descriptionEditInput" rows="3"> {{ data.description}} </textarea>
+                    <textarea class="form-control" name="description" v-model="data.description" id="descriptionEditInput" rows="3"> {{ data.description }} </textarea>
                 </div>
 
                 <div class="mb-3">
@@ -31,7 +31,7 @@
                     <label class="form-label"> Tags: </label>
                     <br>
 
-                    <div class="form-check form-check-inline" v-for="(tag, tagIndex) in this.tags">
+                    <div class="form-check form-check-inline" v-for="(tag) in this.tags" :key="tag.id">
                         <input class="form-check-input"
                                 name="tags[]"
                                 type="checkbox"
@@ -60,14 +60,14 @@
                 <div class="row">
                     <div class="col-12 pt-3">
                         <h2>Sub-tasks</h2>
-                        <div class="mb-3" style="border: 1px solid lightgray; border-radius: 10px" v-for="(subTask, subTaskIndex) in data.sub_tasks.data">
+                        <div class="mb-3" style="border: 1px solid lightgray; border-radius: 10px" v-for="(subTask) in data.sub_tasks.data" :key="subTask.id">
                             <div class="row p-1">
                                 <div class="col-5">
                                     <h5>{{ subTask.title }}</h5>
                                     <p> Dedaline: {{ subTask.deadline }}</p>
                                     <p> Status: {{ subTask.status.title }}</p>
                                     <p>
-                                        <span v-for="(tag, tagIndex) in subTask.tags" class="btn btn-success m-1">
+                                        <span v-for="(tag) in subTask.tags" class="btn btn-success m-1" :key="tag.id">
                                                 {{ tag.title }}
                                         </span>
                                     </p>
@@ -97,8 +97,8 @@
 
 <script>
 import axios from 'axios';
-import TaskConfig from '@/views/TaskConfig';
-import TaskForm from '@/views/TaskForm.vue';
+import TaskConfig from '@/views/Tasks/TaskConfig';
+import TaskForm from '@/views/Tasks/TaskForm.vue';
 import { Bootstrap5Pagination } from 'laravel-vue-pagination';
 import { ref } from 'vue';
 

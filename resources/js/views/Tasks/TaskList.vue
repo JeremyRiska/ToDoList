@@ -69,8 +69,8 @@
 
 <script>
     import axios from 'axios';
-    import TaskConfig from '@/views/TaskConfig';
-    import TaskForm from '@/views/TaskForm.vue';
+    import TaskConfig from '@/views/Tasks/TaskConfig';
+    import TaskForm from '@/views/Tasks/TaskForm.vue';
     import { ref } from 'vue';
 
     export default {

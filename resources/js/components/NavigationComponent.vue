@@ -5,6 +5,10 @@
                 <router-link to="/task/home" style="color: white"> Dashboard </router-link>
 
             </button>
+            <button class="btn btn-primary m-3">
+                <router-link to="/task/login" style="color: white"> Login </router-link>
+
+            </button>
         </nav>
         <div class="App-content">
             <router-view />
